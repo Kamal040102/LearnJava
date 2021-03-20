@@ -2,7 +2,10 @@ import java.util.Scanner;
 
 public class PercentageCalculator {
     public static void main(String[] args) {
-        System.out.println("Enter the total marks of each subject");
+        System.out.println("Enter your name:\t");
+        Scanner name = new Scanner(System.in);
+        String sName = name.next();
+        System.out.println("Hello, " + sName + ". \nEnter the total marks of each subject");
         Scanner marks = new Scanner(System.in);
         int t_marks = marks.nextInt();
         t_marks = t_marks * 5;
@@ -23,5 +26,12 @@ public class PercentageCalculator {
         System.out.println("Total Marks:\t" + t_marks+ " marks.");
         System.out.println("Total Marks Gained:\t" + t_marks_gained +" marks.");
         System.out.println("Percentage Scored:\t" + percentageScored + " %.");
+
+        if(percentageScored >= 33.00){
+            System.out.println("Congrats, "+ sName + ". You have cleared the Examination.");
+        }
+        else{
+            System.out.println("Sorry " + sName + ". You havent cleared the Examination. \nBetter Luck Next Time :)");
+        }
     }
 }
