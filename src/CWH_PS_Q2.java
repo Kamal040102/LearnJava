@@ -12,7 +12,7 @@ public class CWH_PS_Q2 {
         float marks3 = inp.nextFloat();
 
         float t_marks_obtained = marks1 + marks2 + marks3;
-        float cgpa = t_marks_obtained / 300;
+        float cgpa = t_marks_obtained / 30;
         System.out.print("Total marks obtained:\t"+ t_marks_obtained);
         System.out.print("CGPA:\t" + cgpa);
     }
