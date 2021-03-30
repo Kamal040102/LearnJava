@@ -1,60 +1,108 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class RockPaperScissor {
+public class RockPaperScissor{
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         Random rand = new Random();
-        System.out.println("Welcome to Rock Paper Scissor Game");
-        System.out.println("----------------------------------------------------");
 
-        // User Input
-        System.out.println("Enter your Move: Rock, Paper or Scissor");
+        System.out.println("Welcome to this Rock, Paper, Scissor Game");
+        
+        System.out.println("Developed By: Kamal Sharma");
+        System.out.println("------------------------------------------------------");
+
+
+        int i = 1;
+        while(i <= 5){
+        // User Side
+
+        System.out.println("Enter your input: Scissor, Paper or Rock");
         String userMove = inp.nextLine();
-        int userMoveAnalyzer;
 
-        if(userMove == "Scissor"){
+        if(userMove == "Quit" || userMove == "quit"){
+            break;
+        }
+
+        int userMoveAnalyzer = -1;
+
+        if(userMove.equals("Scissor")){
             userMoveAnalyzer = 0;
         }
-        else if(userMove == "Paper"){
+        else if(userMove.equals("Paper")){
             userMoveAnalyzer = 1;
         }
-        else if(userMove == "Rock"){
+        else if(userMove.equals("Rock")){
             userMoveAnalyzer = 2;
         }
         else{
-            System.out.println("Invalid User Input Error");
+            System.out.println("Invalid User Input");
         }
 
+        // Opponent Side
 
-        // Opponent Move Genration
-        int randomOpponentMove = rand.nextInt(3);
-        // System.out.println(randomOpponentMove);  // Delete this line
+        int opponentMove = rand.nextInt(3);
+        
+        String opponentMoveAnalyzer = "";
 
-        String opponentMove = "";
-
-        if(randomOpponentMove == 0){
-            opponentMove = "Scissor";
+        if(opponentMove == 0){
+            opponentMoveAnalyzer = "Scissor";
         }
-        else if(randomOpponentMove == 1){
-            opponentMove = "Paper";
+        else if(opponentMove == 1){
+            opponentMoveAnalyzer = "Paper";
         }
-        else if (randomOpponentMove == 2){
-            opponentMove = "Rock";
+        else if (opponentMove == 2){
+            opponentMoveAnalyzer = "Rock";
         }
         else{
-            System.out.println("Invalid Random Opponent Move Error.");
+            System.out.println("Invalid Opponent Move");
         }
 
-        System.out.println("Your Move: " + userMove + "|| My Move: " + opponentMove + ".");
-        // Result Generation
-        if (userMove == opponentMove){
-            
-            System.out.println("There is a tie between you and me");
+        // Printing Moves
+        System.out.println("Your Move: " + userMove);
+        System.out.println("My Move: " + opponentMoveAnalyzer);
+
+        // Result Side
+        String result = "";
+        System.out.println("");
+        System.out.println("");
+        if(userMoveAnalyzer == opponentMove){
+            // System.out.println("There is tie between us.");
+            result = "There is tie between us";
+        }
+        else if(userMoveAnalyzer == 0 && opponentMove == 1){
+            // System.out.println("Congratulations!!!, You won");
+            result = "Congratulations!!!, You won"; 
+        }
+        else if(userMoveAnalyzer == 0 && opponentMove == 2){
+           // System.out.println("Alas!!!, You Lost. Better Luck Next Time.");
+           result = "Alas!!!, You Lost. Better Luck Next Time.";
+        }
+        else if(userMoveAnalyzer == 1 && opponentMove == 2){
+           // System.out.println("Congratulations!!!, You won");
+           result = "Congratulations!!!, You won";
+        }
+        else if(userMoveAnalyzer == 1 && opponentMove == 0){
+           // System.out.println("Alas!!!, You Lost. Better Luck Next Time.");
+           result = "Alas!!!, You Lost. Better Luck Next Time.";
+        }
+        else if(userMoveAnalyzer == 2 && opponentMove == 0){
+           // System.out.println("Congratulations!!!, You won");
+           result = "Congratulations!!!, You won";
+        }
+        else if(userMoveAnalyzer == 2 && opponentMove == 1){
+           // System.out.println("Alas!!!, You Lost. Better Luck Next Time.");
+           result = "Alas!!!, You Lost. Better Luck Next Time.";
         }
         else{
-            System.out.println("Different");
+           // System.out.println("Error 404: Can't generate Result.");
+           result = "Error 404: Can't generate Result.";
         }
-
+        
+        System.out.println("Result:\t" + result.toUpperCase());
+        i++;
+        System.out.println("");
+        System.out.println("Write \"Quit\" or \"quit\" to Finish the match.");
+        System.out.println("");
+    }
     }
 }
