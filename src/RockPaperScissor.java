@@ -13,15 +13,11 @@ public class RockPaperScissor{
 
 
         int i = 1;
-        while(i <= 5){
+        while(i <= 3){
         // User Side
 
         System.out.println("Enter your input: Scissor, Paper or Rock");
         String userMove = inp.nextLine();
-
-        if(userMove == "Quit" || userMove == "quit"){
-            break;
-        }
 
         int userMoveAnalyzer = -1;
 
@@ -101,7 +97,6 @@ public class RockPaperScissor{
         System.out.println("Result:\t" + result.toUpperCase());
         i++;
         System.out.println("");
-        System.out.println("Write \"Quit\" or \"quit\" to Finish the match.");
         System.out.println("");
     }
     }
