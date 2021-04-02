@@ -1,3 +1,5 @@
+package CWH_PS4;
+
 import java.util.Scanner;
 
 public class CWH_PS4_Q4 {

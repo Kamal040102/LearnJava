@@ -1,3 +1,5 @@
+package CWH_PS2;
+
 import java.util.Scanner;
 public class CWH_PS2_Q4 {
     /*

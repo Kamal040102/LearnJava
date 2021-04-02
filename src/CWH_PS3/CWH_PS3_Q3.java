@@ -1,3 +1,5 @@
+package CWH_PS3;
+
 import java.util.Scanner;
 
 public class CWH_PS3_Q3 {

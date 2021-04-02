@@ -1,3 +1,5 @@
+package CWH_Ch5_QQ;
+
 public class CWH_Ch5_QQ1 {
     public static void main(String[] args) {
         int x = 100;

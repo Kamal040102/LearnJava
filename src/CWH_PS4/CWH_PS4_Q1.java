@@ -1,3 +1,6 @@
+package CWH_PS4;
+
+
 public class CWH_PS4_Q1 {
     public static void main(String[] args) {
         byte a = 10;

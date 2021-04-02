@@ -1,3 +1,5 @@
+package CWH_Ch5_QQ;
+
 import java.util.Scanner;
 
 public class CWH_Ch5_QQ2 {
