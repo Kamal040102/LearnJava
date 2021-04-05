@@ -1,3 +1,5 @@
+package Lectures;
+
 public class LearnJava{
     public static void main(String[] args) {
         int a = 10;
