@@ -29,7 +29,7 @@ public class array{
         // System.out.println(arr3[4]);        // Execution
 
       //  int [] arr = {78,99,45,32,85,25,65};
-        String [] arr = {"Kamal", "Gulabo", "Movika", "Miss Ajib", "Mr Ajib"};
+        // String [] arr = {"Kamal", "Gulabo", "Movika", "Miss Ajib", "Mr Ajib"};
         // System.out.println(arr.length);
 
          // Printing of array using naive method

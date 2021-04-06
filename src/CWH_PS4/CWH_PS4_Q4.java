@@ -5,10 +5,11 @@ import java.util.Scanner;
 public class CWH_PS4_Q4 {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
-        System.out.println("Enter a number:");
-        byte numb = inp.nextByte();
+        try {
+            System.out.println("Enter a number:");
+            byte numb = inp.nextByte();
 
-        switch (numb){
+            switch (numb) {
             case 1:
                 System.out.println("Monday");
                 break;
@@ -20,7 +21,7 @@ public class CWH_PS4_Q4 {
                 break;
             case 4:
                 System.out.println("Thursday");
-                break; 
+                break;
             case 5:
                 System.out.println("Friday");
                 break;
@@ -32,6 +33,9 @@ public class CWH_PS4_Q4 {
                 break;
             default:
                 System.out.println("invalid Input");
+            }
+        } finally {
+            inp.close();
         }
     }
 }
