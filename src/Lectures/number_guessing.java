@@ -1,7 +1,7 @@
 package Lectures;
 
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 
 class number_guessing_game {
     Random rand = new Random();
